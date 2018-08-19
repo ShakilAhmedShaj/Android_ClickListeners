@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     int counter = 0;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 counter++;
-                loginTextView.setText("Login Button is Pressed " + counter +" Times");
+                loginTextView.setText("Login Button is Pressed " + counter + " Times");
             }
         });
     }
