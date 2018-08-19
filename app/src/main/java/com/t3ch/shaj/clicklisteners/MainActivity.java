@@ -1,13 +1,14 @@
 package com.t3ch.shaj.clicklisteners;
 
 import android.annotation.SuppressLint;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private Button PlayButton;
     private Button PauseButton;
@@ -23,23 +24,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         PauseButton = findViewById(R.id.PauseButtonID);
         TextView = findViewById(R.id.TextViewID);
 
-        PlayButton.setOnClickListener(this);
-        PauseButton.setOnClickListener(this);
+        Handler handler = new Handler();
+
+        PlayButton.setOnClickListener(handler);
+        PauseButton.setOnClickListener(handler);
 
 
     }
 
-    @Override
-    public void onClick(View v) {
+    class Handler implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
 
-        if (v.getId() == R.id.PlayButtonID) {
-            TextView.setText("Playing");
+            if (v.getId() == R.id.PlayButtonID) {
+                TextView.setText("Playing");
+            }
+
+            if (v.getId() == R.id.PauseButtonID) {
+                TextView.setText("Paused");
+            }
+
         }
-
-        if (v.getId() == R.id.PauseButtonID) {
-            TextView.setText("Paused");
-        }
-
-
     }
+
+
 }
