@@ -24,27 +24,17 @@ public class MainActivity extends AppCompatActivity {
         PauseButton = findViewById(R.id.PauseButtonID);
         TextView = findViewById(R.id.TextViewID);
 
-        Handler handler = new Handler();
-
-        PlayButton.setOnClickListener(handler);
-        PauseButton.setOnClickListener(handler);
-
 
     }
 
-    class Handler implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-
-            if (v.getId() == R.id.PlayButtonID) {
-                TextView.setText("Playing");
-            }
-
-            if (v.getId() == R.id.PauseButtonID) {
-                TextView.setText("Paused");
-            }
-
+    public void showMessage(View v) {
+        if (v.getId() == R.id.PlayButtonID) {
+            TextView.setText("Playing");
         }
+        if (v.getId() == R.id.PauseButtonID) {
+            TextView.setText("Paused");
+        }
+
     }
 
 
