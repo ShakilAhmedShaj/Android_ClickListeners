@@ -10,8 +10,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private Button PlayButton;
+    private Button PauseButton;
     private TextView TextView;
-    int counter = 0;
 
 
     @Override
@@ -20,15 +20,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         PlayButton = findViewById(R.id.PlayButtonID);
+        PauseButton = findViewById(R.id.PauseButtonID);
         TextView = findViewById(R.id.TextViewID);
 
         PlayButton.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                counter++;
-                TextView.setText("Play Button is Pressed " + counter + " Times");
+
+                TextView.setText("Playing");
             }
+
+        });
+
+        PauseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                TextView.setText("Paused");
+            }
+
         });
     }
 }
