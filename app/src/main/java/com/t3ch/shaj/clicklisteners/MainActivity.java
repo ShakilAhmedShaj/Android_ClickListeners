@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button PlayButton;
     private Button PauseButton;
@@ -23,22 +23,23 @@ public class MainActivity extends AppCompatActivity {
         PauseButton = findViewById(R.id.PauseButtonID);
         TextView = findViewById(R.id.TextViewID);
 
-        PlayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        PlayButton.setOnClickListener(this);
+        PauseButton.setOnClickListener(this);
 
-                TextView.setText("Playing");
-            }
 
-        });
+    }
 
-        PauseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
 
-                TextView.setText("Paused");
-            }
+        if (v.getId() == R.id.PlayButtonID) {
+            TextView.setText("Playing");
+        }
 
-        });
+        if (v.getId() == R.id.PauseButtonID) {
+            TextView.setText("Paused");
+        }
+
+
     }
 }
