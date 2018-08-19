@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button loginButton;
-    private TextView loginTextView;
+    private Button PlayButton;
+    private TextView TextView;
     int counter = 0;
 
 
@@ -19,15 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginButton = findViewById(R.id.LoginButtonID);
-        loginTextView = findViewById(R.id.TextViewID);
+        PlayButton = findViewById(R.id.PlayButtonID);
+        TextView = findViewById(R.id.TextViewID);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        PlayButton.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 counter++;
-                loginTextView.setText("Login Button is Pressed " + counter + " Times");
+                TextView.setText("Play Button is Pressed " + counter + " Times");
             }
         });
     }

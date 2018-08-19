@@ -8,25 +8,35 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/PlayButtonID"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/play"
-        android:drawablePadding="5dp"
-        android:text="@string/Play_Button_Text"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/PauseButtonID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/pause"
-        android:drawablePadding="5dp"
-        android:text="@string/Pause_Button_Text"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/PlayButtonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/play"
+            android:drawablePadding="5dp"
+            android:text="@string/Play_Button_Text"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/PauseButtonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pause"
+            android:drawablePadding="5dp"
+            android:text="@string/Pause_Button_Text"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/TextViewID"
