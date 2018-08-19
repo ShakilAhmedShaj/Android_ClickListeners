@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/LoginButtonID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Login_Button_Name"
@@ -15,6 +17,12 @@
         android:textStyle="bold"
         android:drawableLeft="@drawable/login"
         />
+    <TextView
+        android:id="@+id/TextViewID"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
 
 
 </LinearLayout>
