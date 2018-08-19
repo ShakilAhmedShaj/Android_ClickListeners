@@ -2,4 +2,6 @@
     <string name="app_name">ClickListeners</string>
     <string name="Login_Button_Name">Login</string>
     <string name="Button_PressMessage">Login Button Pressed</string>
+    <string name="Play_Button_Text">  Play</string>
+    <string name="Pause_Button_Text"> Pause</string>
 </resources>
