@@ -6,24 +6,11 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".MainActivity">
-    
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Logun_Button"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        />
-    <ImageButton
-        android:layout_margin="15sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/login"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Logun_Button"
+        android:text="@string/Login_Button_Name"
         android:textSize="15sp"
         android:textStyle="bold"
         android:drawableLeft="@drawable/login"

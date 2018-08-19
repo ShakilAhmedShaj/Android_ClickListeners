@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">ClickListeners</string>
-    <string name="Logun_Button">Login</string>
+    <string name="Login_Button_Name">Login</string>
 </resources>
