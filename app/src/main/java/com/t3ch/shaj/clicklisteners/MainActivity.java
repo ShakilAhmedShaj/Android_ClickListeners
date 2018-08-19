@@ -1,5 +1,6 @@
 package com.t3ch.shaj.clicklisteners;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button loginButton;
     private TextView loginTextView;
+    int counter = 0;
 
 
 
@@ -22,9 +24,11 @@ public class MainActivity extends AppCompatActivity {
         loginTextView = findViewById(R.id.TextViewID);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                loginTextView.setText(R.string.Button_PressMessage);
+                counter++;
+                loginTextView.setText("Login Button is Pressed " + counter +" Times");
             }
         });
     }
